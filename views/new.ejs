@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create chat</title>
+
+    <style>
+        body{
+            display: flex;
+            background-color: antiquewhite;
+            
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        form{
+            box-shadow:10px rgb(255, 255, 255);
+            position: absolute;
+            top:15%;
+            border-radius: 10px;
+            left:30%;
+            background-color: rgb(97, 97, 97);
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 50vh;
+            width: 30vw;
+            padding: 10vh;
+        }
+        input,button{
+            margin: 10px;
+            border-radius: 5px;
+            height: 30px;
+            background-color: rgb(255, 253, 253);
+            border: 0;
+            padding: 5px;
+
+        }
+        input:hover{
+            cursor: pointer;
+            background-color:rgb(255, 202, 132);
+            height: 31px;
+            
+        }
+        button{
+            width: 80px;
+            left: 50%;
+            padding: 5px;
+            background-color: rgb(255, 173, 65);
+            border: 0;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(250, 187, 127);
+            color: white;
+            height: 35;
+            width: 83px;
+        }
+        h2{
+            color:rgb(212, 150, 15);
+            font-weight: 900;
+            font-family:Arial, Helvetica, sans-serif ;
+            background-color: black;
+            padding: 6px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div><div>
+        <form action="/new" method="post">
+            <h2>Create New Chat</h2>
+            <input type="text" name="msg" id="" placeholder="message">
+            <input type="text" name="from" id="" placeholder="frome">  
+            <input type="text" name="to" id="" placeholder="to">
+            <button>Create</button>
+        </form>
+    </div></div>
+    
+</body>
+</html>

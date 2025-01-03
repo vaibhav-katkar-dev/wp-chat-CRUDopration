@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini Whatsapp</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:25px;
+        }
+
+        p{
+            border-radius: 5px;
+            margin: 5px;
+        }
+        body{
+            padding: 10px;
+        }
+        #wc{
+            background-color: rgb(105, 182, 42);
+            font-size: 35px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+
+            text-align: center;
+        }
+        #msg{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 196, 0);
+            font-weight: bold;       
+            padding: 3px 10px;
+        
+        }
+
+        div{
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(211, 208, 208);
+            
+            
+            
+            
+        }
+        hr{
+            margin-bottom: 10px;
+            border: 2px solid ;
+            margin-top: 10px;
+
+        }
+        #new-chat{
+            text-decoration: none;
+
+            font-size: medium;
+            background-color:rgb(255, 136, 0) ;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            color: black;
+            font-weight: 900;
+
+        
+        }
+        #new-chat:hover{
+            background-color: rgb(255, 153, 0);
+            color: aliceblue;
+            font-size: large;
+
+        }
+
+        #edit,#delete{
+            text-decoration: none;
+
+            font-size: medium;
+            background-color:rgb(255, 136, 0) ;
+            border-radius: 5px;
+            margin: 5px;
+            margin-bottom: 5px;
+            padding: 5px;
+            color: black;
+            font-weight: 900;
+            width: 50px;
+
+        
+        }
+        #edit{
+            background-color: rgb(0, 81, 255);
+        }
+        #edit:hover{
+            background-color: rgb(20, 0, 204);
+                color: aliceblue;
+            font-weight: 800;
+            font-size: large;
+        }
+
+        #delete{
+            background-color: rgb(255, 51, 0);
+        }
+        #delete:hover{
+            background-color: rgb(204, 41, 0);
+                color: aliceblue;
+            font-weight: 800;
+            font-size: large;
+        }
+
+        #date{
+            font-size: small;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="display: flex,">
+
+        <h2 id="wc">Whatsapp Chats</h2>
+        <a href="/new" id="new-chat">New Chate Create</a>
+    </div>
+
+
+    <div class="content">
+        
+        <div>
+        <%for(chat of chats){%>
+    
+        <p id="msg">Massage is : <%=chat.msg%></p>
+        <p>Frome: <%=chat.from%></p>
+        <p>To: <%=chat.to%></p>
+        <%if(chat.time){%>
+        <p id="date">Time: <%=chat.time%></p>
+
+        <a href="http://localhost:8080/chats/<%=chat._id%>/edit" id="edit">edit</a>
+        <a href="http://localhost:8080/chats/<%=chat._id%>/del" id="delete">delete</a>
+        <%}%>
+        <br>
+        <hr>
+    
+    <%}%>
+</div>
+
+    </div>
+    
+</body>
+</html>

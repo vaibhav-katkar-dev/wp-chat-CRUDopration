@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit chat</title>
+<style>
+body{
+            display: flex;
+            background-color: antiquewhite;
+            
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        form{
+            box-shadow:10px rgb(255, 255, 255);
+            position: absolute;
+            top:15%;
+            border-radius: 10px;
+            left:30%;
+            background-color: rgb(156, 155, 155);
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 50vh;
+            width: 30vw;
+            padding: 10vh;
+        }
+        textarea,button{
+            margin: 10px;
+            border-radius: 5px;
+            height: 30px;
+            background-color: rgb(255, 253, 253);
+            border: 0;
+            padding: 5px;
+
+        }
+        textarea:hover{
+            cursor: pointer;
+            background-color:rgb(255, 241, 223);
+            height: 100px;
+            
+        }
+        button{
+            width: 80px;
+            left: 50%;
+            padding: 5px;
+            background-color: rgb(255, 173, 65);
+            border: 0;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(199, 96, 0);
+            color: rgb(255, 255, 255);
+            height: 35;
+            width: 83px;
+        }
+        p{
+            background-color: antiquewhite;
+            font-weight: 400;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            font-weight: 700;
+        }
+</style>
+
+</head>
+<body>
+
+    <div><div>
+        <form action="/chats/<%=chat._id%>?_method=PUT" method="POST">
+            <!-- <p>id:<%=chat.id%></p> -->
+             <h2>Edit Massage</h2>
+            <p>From:<%=chat.from%></p>
+            <p>To:<%=chat.to%></p>
+            <textarea type="text" name="msg" value="MSG: <%=chat.msg%>" id="" placeholder=" MSG : <%=chat.msg%>"></textarea>
+
+            <button>Edit</button>
+        </form>
+    </div></div>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+body{
+            display: flex;
+            background-color: antiquewhite;
+            
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        form{
+            box-shadow:10px rgb(255, 255, 255);
+            position: absolute;
+            top:15%;
+            border-radius: 10px;
+            left:30%;
+            background-color: rgb(156, 155, 155);
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 50vh;
+            width: 30vw;
+            padding: 10vh;
+        }
+        button{
+            margin: 10px;
+            border-radius: 5px;
+            height: 30px;
+            background-color: rgb(255, 253, 253);
+            border: 0;
+            padding: 5px;
+
+        }
+      
+            
+        
+        button{
+            width: 80px;
+            left: 50%;
+            padding: 5px;
+            background-color: rgb(240, 11, 4);
+            border: 0;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover{
+            background-color: rgb(199, 96, 0);
+            color: rgb(255, 255, 255);
+            height: 35;
+            width: 83px;
+        }
+        p{
+            background-color: antiquewhite;
+            font-weight: 400;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            
+            font-weight: 700;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit chat</title>
+</head>
+<body>
+
+    <div><div>
+        <form action="/chats/<%=chat._id%>/del?_method=DELETE" method="POST">
+            <h1>Are You Sure to Delete Massage</h1>
+            <!-- <p>id:<%=chat.id%></p> -->
+            <p>From:<%=chat.from%></p>
+            <p>To:<%=chat.to%></p>
+            <p>MSG:<%=chat.msg%></p>
+<!-- 
+            <textarea type="text" name="msg" value="<%=chat.msg%>" id="" placeholder="<%=chat.msg%>"></textarea> -->
+
+            <button>Delete</button>
+        </form>
+    </div></div>
+    
+</body>
+</html>
