@@ -26,7 +26,7 @@
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/vaibhav-katkar-dev/wp-chat-CRUDopration.git
-   cd wp-chats
+   cd wp-chat-CRUDopration
    ```
 
 2. **Install Dependencies:**
@@ -100,10 +100,5 @@ Contributions are welcome! Feel free to fork the repository and submit pull requ
 
 ---
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
 
 **Happy Coding!**
