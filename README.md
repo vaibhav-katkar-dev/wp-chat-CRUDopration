@@ -11,8 +11,7 @@
 - **Delete Chats:** Permanently remove a chat.
 - **Unlimited Chats:** Users can create and manage as many chats as they want.
 
-### Application Screenshot
-![Main Page](<image-url>)
+
 
 ---
 
@@ -26,7 +25,7 @@
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/vaibhav-katkar-dev/wp-chat-CRUDopration.git
    cd wp-chats
    ```
 
@@ -51,25 +50,25 @@
 
 ### `GET /chats` 
 - Displays the main page with all chats.
-![All Chats](<image-url>)
+![All Chats](https://raw.githubusercontent.com/vaibhav-katkar-dev/wp-chat-CRUDopration/refs/heads/main/assets/wp_home.PNG)
 
 ### `GET /new`
 - Renders the form to create a new chat.
-![Create Chat](<image-url>)
+![Create Chat](https://raw.githubusercontent.com/vaibhav-katkar-dev/wp-chat-CRUDopration/refs/heads/main/assets/wp-create.PNG)
 
 ### `POST /new`
 - Creates a new chat.
 
 ### `GET /chats/:id/edit`
 - Renders the edit form for a specific chat.
-![Edit Chat](<image-url>)
+![Edit Chat](https://raw.githubusercontent.com/vaibhav-katkar-dev/wp-chat-CRUDopration/refs/heads/main/assets/wp-edit.PNG)
 
 ### `PUT /chats/:id`
 - Updates an existing chat by ID.
 
 ### `GET /chats/:id/del`
 - Renders a confirmation page for deleting a chat.
-![Delete Chat](<image-url>)
+![Delete Chat](https://raw.githubusercontent.com/vaibhav-katkar-dev/wp-chat-CRUDopration/refs/heads/main/assets/wp-delete.PNG)
 
 ### `DELETE /chats/:id/del`
 - Deletes a chat by ID.
